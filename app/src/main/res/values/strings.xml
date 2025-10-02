@@ -7,4 +7,10 @@
     <string name="edit">EDIT</string>
     <string name="delete">DELETE</string>
     <string name="submit">SUBMIT</string>
+    <string name="name">ชื่อ</string>
+    <string name="lname">นามสกุล</string>
+    <string name="age">อายุ</string>
+    <string name="tel">เบอร์โทร</string>
+    <string name="email">อีเมล</string>
+    <string name="fac">คณะ</string>
 </resources>

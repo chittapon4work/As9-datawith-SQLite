@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Viewdata.class);
         startActivity(intent);
     }
+    public void clickInsert(View view){
+        Intent intent = new Intent(this, InsertData.class);
+        startActivity(intent);
+    }
 }
