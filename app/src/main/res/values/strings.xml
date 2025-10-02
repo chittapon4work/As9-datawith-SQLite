@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">as9</string>
+    <string name="home">HOME</string>
+    <string name="menu">กรุณาเลือกเมนูที่ต้องการ</string>
+    <string name="view">VIEW DATA</string>
+    <string name="insert">INSERT</string>
+    <string name="edit">EDIT</string>
+    <string name="delete">DELETE</string>
+    <string name="submit">SUBMIT</string>
+</resources>
