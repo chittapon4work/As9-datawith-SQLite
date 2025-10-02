@@ -1,17 +1,28 @@
 package com.example.as9;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.SQLException;
+import android.util.Log;
 
 public class DBhelper extends SQLiteOpenHelper{
 
     public static final String DB_name =  "dbstudents.db";
     public static final String table_name =  "student_table";
+    public static final String col2_name = "first_name";
+    public static final String col3_last_name = "last_name";
+    public static final String col4_age = "age";
+    public static final String col5_tel = "tel";
+    public static final String col6_email = "email";
+    public static final String col7_faculty = "fac";
+
+
 
     public DBhelper(Context context){
-        super(context,DB_name,null,1);
+        super(context,DB_name,null,2);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -35,5 +46,22 @@ public class DBhelper extends SQLiteOpenHelper{
     public Cursor getStudent(){
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM "+table_name,null);
+    }
+    public boolean insertData(String name,String last_name,int age,String tel,String email,String faculty){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col2_name,name);
+        contentValues.put(col3_last_name,last_name);
+        contentValues.put(col4_age,age);
+        contentValues.put(col5_tel,tel);
+        contentValues.put(col6_email,email);
+        contentValues.put(col7_faculty,faculty);
+        long result = db.insert(table_name,null,contentValues);
+        if(result == -1){
+            return false;
+        } else{
+            return true;
+        }
+
     }
 }

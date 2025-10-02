@@ -24,4 +24,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InsertData.class);
         startActivity(intent);
     }
+    public void insertData(View view){
+        Intent homePage = new Intent(this,InsertData.class);
+        startActivity(homePage);
+    }
+
 }

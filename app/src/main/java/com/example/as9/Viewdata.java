@@ -32,21 +32,21 @@ public class Viewdata extends AppCompatActivity {
         if(student.getCount() == 0){
             showinfo("Massage","No Data");
         }else {
-            StringBuffer datbuff = new StringBuffer();
+            StringBuffer databuff = new StringBuffer();
             while (student.moveToNext()){
-                datbuff.append("รหัส :" +student.getString(0)+"\n");
-                datbuff.append("ชื่อ :" +student.getString(1)+"\n");
-                datbuff.append("นามสกุล :" +student.getString(2)+"\n");
-                datbuff.append("อายุ :" +student.getString(3)+"\n");
-                datbuff.append("เบอร์โทร :" +student.getString(4)+"\n");
-                datbuff.append("อีเมล :" +student.getString(5)+"\n");
-                datbuff.append("คณะ :" +student.getString(6)+"\n");
-                datbuff.append("--------------------------------------------"+"\n");
+                databuff.append("รหัส :" +student.getString(0)+"\n");
+                databuff.append("ชื่อ :" +student.getString(1)+"\n");
+                databuff.append("นามสกุล :" +student.getString(2)+"\n");
+                databuff.append("อายุ :" +student.getString(3)+"\n");
+                databuff.append("เบอร์โทร :" +student.getString(4)+"\n");
+                databuff.append("อีเมล :" +student.getString(5)+"\n");
+                databuff.append("คณะ :" +student.getString(6)+"\n");
+                databuff.append("--------------------------------------------"+"\n");
 
             }
             tvshow.setMovementMethod(new ScrollingMovementMethod());
-            tvshow.setTextColor(Color.parseColor("344F1F"));
-            tvshow.setText("รายชื่อนักศึกษา\n"+datbuff);
+            tvshow.setTextColor(Color.parseColor("#344F1F"));
+            tvshow.setText("รายชื่อนักศึกษา\n"+databuff);
         }
     }
     public void showinfo(String title,String msg) {
