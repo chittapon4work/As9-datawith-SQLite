@@ -56,4 +56,9 @@ public class Viewdata extends AppCompatActivity {
         show.setMessage(msg);
         show.show();
     }
+
+    public void clickhome(View view){
+        Intent  clickhome = new Intent(this, MainActivity.class);
+        startActivity(clickhome);
+    }
 }
