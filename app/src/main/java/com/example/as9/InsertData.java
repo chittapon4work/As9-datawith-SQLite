@@ -14,4 +14,8 @@ public class InsertData extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_insert_data);
     }
+    public void clickhome(View view){
+        Intent clickhome = new Intent(this, MainActivity.class);
+        startActivity(clickhome);
+    }
 }
