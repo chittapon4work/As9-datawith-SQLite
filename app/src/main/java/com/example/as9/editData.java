@@ -50,6 +50,26 @@ public class editData extends AppCompatActivity {
         show.setMessage(msg);
         show.show();
     }
+    public void bttSubmit(View view){
+        int numage = Integer.parseInt(edtAge.getText().toString());
+        int id = Integer.parseInt(edtId.getText().toString());
+        boolean isData = dbhelper.updateData(id,edtName.getText().toString(),edtLname.getText().toString(),numage,edtTel.getText().toString(),edtEmail.getText().toString(),edtFac.getText().toString());
+        if (isData){
+            showinfo("Message","แก้ไขสำเร็จ");
+            ClearText();
+        }else {
+            showinfo("Message","ไม่สามารถแก้ไขได้");
+        }
+    }
+    public void ClearText(){
+        edtId.setText("");
+        edtName.setText("");
+        edtLname.setText("");
+        edtAge.setText("");
+        edtTel.setText("");
+        edtEmail.setText("");
+        edtFac.setText("");
+    }
     public void clickhome(View view){
         Intent clickhome = new Intent(this, MainActivity.class);
         startActivity(clickhome);

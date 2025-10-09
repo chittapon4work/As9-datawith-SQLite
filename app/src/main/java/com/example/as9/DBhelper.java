@@ -70,4 +70,26 @@ public class DBhelper extends SQLiteOpenHelper{
         Cursor cursor = db.rawQuery("SELECT * FROM "+table_name+" WHERE id=?",new String[]{String.valueOf(id)});
         return cursor;
     }
+    public boolean updateData(int id,String name,String last_name,int age,String tel,String email,String faculty){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col2_name,name);
+        contentValues.put(col3_last_name,last_name);
+        contentValues.put(col4_age,age);
+        contentValues.put(col5_tel,tel);
+        contentValues.put(col6_email,email);
+        contentValues.put(col7_faculty,faculty);
+        long result = db.update(table_name,contentValues,"id=?",new String[]{String.valueOf(id)});
+        if(result == -1){
+            return false;
+        }else {
+            return true;
+        }
+    }
+    public int deleteID(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        int result = db.delete(table_name,"id=?",new String[]{String.valueOf(id)});
+        db.close();
+        return result;
+    }
 }

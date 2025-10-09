@@ -138,6 +138,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/charm"
+        android:onClick="clickDelete"
         android:text="@string/delete"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
