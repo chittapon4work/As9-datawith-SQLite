@@ -32,5 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Intent homePage = new Intent(this,editData.class);
         startActivity(homePage);
     }
+    public void clickDelete(View view){
+        Intent homePage = new Intent(this,DeleteData.class);
+        startActivity(homePage);
+    }
 
 }
