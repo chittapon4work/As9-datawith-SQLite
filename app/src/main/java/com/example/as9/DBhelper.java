@@ -22,7 +22,7 @@ public class DBhelper extends SQLiteOpenHelper{
 
 
     public DBhelper(Context context){
-        super(context,DB_name,null,2);
+        super(context,DB_name,null,5);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
