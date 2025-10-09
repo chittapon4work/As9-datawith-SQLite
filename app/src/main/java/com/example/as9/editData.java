@@ -29,18 +29,18 @@ public class editData extends AppCompatActivity {
         edtFac = findViewById(R.id.edtfac);
         edtId = findViewById(R.id.edtid);
     }
-    public void clickSearchBT(View view){
+    public void clickSearch(View view){
         int id = Integer.parseInt(edtId.getText().toString());
-        Cursor searchid = dbhelper.searchId(id);
+        Cursor searchid = dbhelper.searchID(id);
         if (!searchid.moveToFirst()){
             showinfo("Message","ไม่พบข้อมูล");
         }else {
-            edtName.setText(searchid.getShort(1));
-            edtLname.setText(searchid.getShort(1));
-            edtAge.setText(searchid.getShort(1));
-            edtTel.setText(searchid.getShort(1));
-            edtEmail.setText(searchid.getShort(1));
-            edtFac.setText(searchid.getShort(1));
+            edtName.setText(searchid.getString(1));
+            edtLname.setText(searchid.getString(2));
+            edtAge.setText(searchid.getString(3));
+            edtTel.setText(searchid.getString(4));
+            edtEmail.setText(searchid.getString(5));
+            edtFac.setText(searchid.getString(6));
         }
     }
     public void showinfo(String title,String msg) {

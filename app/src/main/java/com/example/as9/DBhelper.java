@@ -22,7 +22,7 @@ public class DBhelper extends SQLiteOpenHelper{
 
 
     public DBhelper(Context context){
-        super(context,DB_name,null,5);
+        super(context,DB_name,null,6);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -65,7 +65,7 @@ public class DBhelper extends SQLiteOpenHelper{
         }
 
     }
-    public Cursor searchId(int id){
+    public Cursor searchID(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM "+table_name+" WHERE id=?",new String[]{String.valueOf(id)});
         return cursor;

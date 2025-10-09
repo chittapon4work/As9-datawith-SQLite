@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/charm"
-        android:onClick="clickSearchBT"
+        android:onClick="clickSearch"
         android:text="@string/search"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
