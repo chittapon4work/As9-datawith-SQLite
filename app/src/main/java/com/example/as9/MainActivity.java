@@ -28,5 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Intent homePage = new Intent(this,InsertData.class);
         startActivity(homePage);
     }
+    public void clickEdit(View view){
+        Intent homePage = new Intent(this,editData.class);
+        startActivity(homePage);
+    }
 
 }

@@ -45,7 +45,8 @@ public class DBhelper extends SQLiteOpenHelper{
     }
     public Cursor getStudent(){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT * FROM "+table_name,null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+table_name,null);
+        return cursor;
     }
     public boolean insertData(String name,String last_name,int age,String tel,String email,String faculty){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -63,5 +64,10 @@ public class DBhelper extends SQLiteOpenHelper{
             return true;
         }
 
+    }
+    public Cursor searchId(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+table_name+" WHERE id=?",new String[]{String.valueOf(id)});
+        return cursor;
     }
 }

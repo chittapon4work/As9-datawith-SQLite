@@ -13,4 +13,7 @@
     <string name="tel">เบอร์โทร</string>
     <string name="email">อีเมล</string>
     <string name="fac">คณะ</string>
+    <string name="search">SEARCH</string>
+    <string name="updaate">UPDATE</string>
+    <string name="id">ID</string>
 </resources>

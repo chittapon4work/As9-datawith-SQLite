@@ -123,6 +123,7 @@
         android:backgroundTint="@color/white"
         android:fontFamily="@font/charm"
         android:text="@string/edit"
+        android:onClick="clickEdit"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
